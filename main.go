@@ -1,1 +1,7 @@
-package github_actions
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Print("TEST...")
+}

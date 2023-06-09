@@ -31,5 +31,4 @@ jobs:
         run: go test ./... -coverpkg=./... -coverprofile cover.out
       - name: Clover coverage
         run: |-
-          go get github.com/codeofthrone/goclover && \
-          goclover -f cover.out -o clover.xml
+          go get github.com/codeofthrone/goclover

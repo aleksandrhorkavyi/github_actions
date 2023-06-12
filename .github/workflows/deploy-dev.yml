@@ -1,6 +1,18 @@
 name: Deploy Dev
+
 on:
-  - push
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+    paths-ignore:
+      - '**.md'
 
 jobs:
   build:

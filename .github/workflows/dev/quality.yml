@@ -30,7 +30,7 @@ jobs:
       - name: Test with coverage
         run: go test ./... -coverpkg=./...
 
-  gosec:
+  security-check:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3

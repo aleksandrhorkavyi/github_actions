@@ -31,5 +31,5 @@ jobs:
           tag_semver: true
 
       - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        run: echo ${{GITHUB_REF_NAME}}
+        run: echo ${{github.GITHUB_REF_NAME}}
 

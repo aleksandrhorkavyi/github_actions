@@ -1,17 +1,9 @@
-name: Deploy Stage
+name: Deploy Prod
 
 on:
-  pull_request:
+  release:
     types:
-      - opened
-      - reopened
-      - edited
-      - synchronize
-  push:
-    branches:
-      - 'stage'
-    paths-ignore:
-      - '**.md'
+      - published
 
 jobs:
   build:

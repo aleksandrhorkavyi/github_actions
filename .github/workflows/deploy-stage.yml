@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_semver: true
 
-      - run: |-
+      - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        run: |-
           echo ${{github.base_ref}}
-          echo 'dfg'
 

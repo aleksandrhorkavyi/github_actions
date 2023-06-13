@@ -11,6 +11,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		panic("Handle error")
 	}
 }
+
 func main() {
 
 	fmt.Println("Starting...")

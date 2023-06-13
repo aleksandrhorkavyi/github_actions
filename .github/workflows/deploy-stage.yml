@@ -1,4 +1,4 @@
-name: Deploy Dev
+name: Deploy Stage
 
 on:
   pull_request:
@@ -9,8 +9,7 @@ on:
       - synchronize
   push:
     branches:
-      - 'main'
-      - 'releases/**'
+      - 'stage'
     paths-ignore:
       - '**.md'
 
@@ -20,11 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-#      - name: Setup Golang
-#        uses: actions/setup-go@v4
-#        with:
-#          go-version: 1.20.x
-
       - name: Build
         run: docker build -t olexandrho/test .
+
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        with:
+          name: olexandrho/test
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          tag_semver: true
 

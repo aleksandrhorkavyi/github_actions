@@ -25,6 +25,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: "latest,${{ steps.pre-step.outputs.release-version }}"
+          tag_semver: true
 
       - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
         run: |-

@@ -16,6 +16,14 @@ on:
       - '**.md'
 
 jobs:
+  formatting:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: Jerome1337/gofmt-action@v1.0.5
+        with:
+          gofmt-path: './src'
+          gofmt-flags: '-l -d'
+
   unit-testing:
     runs-on: ubuntu-22.04
     env:

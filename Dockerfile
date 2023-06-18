@@ -11,8 +11,8 @@ RUN mkdir /code
 COPY . /code
 WORKDIR /code
 # Build binary
-RUN go mod tidy -compat=1.20
-RUN go build -mod=readonly -a -o ./bin/app .
+RUN go mod tidy
+RUN go build -mod=readonly -a -o ./bin/app ./cmd/${APP_NAME}
 
 # Finalize
 FROM alpine

@@ -27,11 +27,3 @@ jobs:
           tags: "latest,${{ steps.pre-step.outputs.release-version }}"
           tag_semver: true
 
-      - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        run: |-
-          echo ${{ github.ref_name }}
-          echo ${{ github.repository }}
-          echo ${GITHUB_REF}
-          echo ${{ github.ref }}
-          echo ${GITHUB_REF:10}
-

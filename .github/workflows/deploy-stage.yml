@@ -27,7 +27,7 @@ jobs:
 
       - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
         run: |
-          echo "${{ steps.branch-name.outputs.current_branch }}"
+          echo ""
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -35,5 +35,5 @@ jobs:
           name: olexandrho/test
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: "5fd_df454"
+          tags: "${{ steps.branch-name.outputs.current_branch }} | sed 's/[^a-zA-Z0-9]/-/g'"
 

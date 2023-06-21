@@ -25,7 +25,7 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
 
-      - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      - name: List Vars #######################################
         run: echo "PR_TAG_NAME=$(${{ steps.branch-name.outputs.current_branch }} | sed 's/[^a-zA-Z0-9]/_/g')" >> $GITHUB_ENV
       - name: Show PR_TAG_NAME
         run: echo ${{ env.PR_TAG_NAME }}

@@ -10,6 +10,10 @@ import (
 func main() {
 	// one more comment for another print
 	fmt.Println("Starting app.......")
+
+	a := [...]int{12, 3, 4}
+
+	fmt.Println(a)
 }
 
 func testPrint() string {

@@ -9,7 +9,7 @@ import (
 // main there is another comment for main func
 func main() {
 	// one more comment for another print
-	fmt.Println("Starting...")
+	fmt.Println("Starting app...")
 }
 
 func testPrint() string {

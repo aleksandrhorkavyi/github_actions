@@ -1,0 +1,26 @@
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - asasalint
+    - bidichk
+    - bodyclose
+    - containedctx
+    - contextcheck
+    - cyclop
+    - decorder
+    - dogsled
+    - errchkjson
+    - errname
+    - errorlint
+    - exhaustruct
+    - exportloopref
+    - ginkgolinter
+    - goconst
+    - gosec
+    - wsl

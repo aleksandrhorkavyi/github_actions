@@ -17,15 +17,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 // main there is another comment for main func
 func main() {
-
 	// one more comment for another print
 	fmt.Println("Starting...")
-	http.HandleFunc("/", handler)
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		panic("Could not start a server")
-	}
-
 }
 
 func testPrint() string {

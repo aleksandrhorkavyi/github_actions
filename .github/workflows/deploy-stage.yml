@@ -27,11 +27,7 @@ jobs:
 
       - name: List Vars @@@@@@@@@@@@@@@@@@@@@@@@@@@@
         run: |
-          echo "${{ steps.branch-name.outputs.base_ref_branch }}"
           echo "${{ steps.branch-name.outputs.current_branch }}"
-          echo "${{ steps.branch-name.outputs.default_branch }}"
-          echo "${{ steps.branch-name.outputs.head_ref_branch }}"
-          echo "${{ steps.branch-name.outputs.is_default }}"
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
@@ -39,5 +35,5 @@ jobs:
           name: olexandrho/test
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: "5454"
+          tags: "5fd/454"
 

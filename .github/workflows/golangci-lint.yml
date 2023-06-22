@@ -1,12 +1,12 @@
-name: golangci-lint
+name: Golang CI Lint
 
 on:
-#  pull_request:
-#    types:
-#      - opened
-#      - reopened
-#      - edited
-#      - synchronize
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
   push:
     branches:
       - 'main'
